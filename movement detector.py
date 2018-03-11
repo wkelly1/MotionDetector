@@ -25,7 +25,7 @@ t = cv2.cvtColor(cam.read()[1], cv2.COLOR_RGB2GRAY)
 t_plus = cv2.cvtColor(cam.read()[1], cv2.COLOR_RGB2GRAY)
 last_capture = False
 movement = False
-
+filename = 0
 while True:
     last_capture = movement
     movement = False
@@ -53,6 +53,9 @@ while True:
         if last_capture == True:
             pass
         else:
+            return_value, image = cam.read()
+            cv2.imwrite('opencv' + str(filename) + '.png', image)
+            filename = filename + 1
             toaster.show_toast("Someone is at your door", "You may want to check it!")
- 
+
 print("Goodbye")
