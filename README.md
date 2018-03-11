@@ -5,8 +5,8 @@ This uses your webcam to see if there is any motion and sends a windows toast no
 Requires two modules:
 cv2 and win10toast
 
-'pip install opencv-python'
+`pip install opencv-python`
 
 and
 
-'pip install win10toast'
+`pip install win10toast`
